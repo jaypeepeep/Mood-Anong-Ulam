@@ -29,22 +29,31 @@ Choosing what to eat can be difficult, especially when your emotions are all ove
 
 ## 🚀 Getting Started
 
-```bash
+
 # 1. Clone the repository
+```
 git clone https://github.com/your-username/mood-anong-ulam.git
+```
 
 # 2. Navigate to the project folder
+```
 cd mood-anong-ulam
+```
 
 # 3. Install dependencies
+```
 npm install
+```
 
-# 4. Run the development server
+# 4. Run the development server\
+```
 npm run dev
+```
 
 # 5. Open in your browser
+```
 # Visit http://localhost:3000
-
+```
 
 ## 🌐 Live Demo
 
