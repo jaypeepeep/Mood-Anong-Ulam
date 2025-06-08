@@ -52,10 +52,9 @@ export default function Home() {
                 <div className="inline-flex items-center gap-2 rounded-lg bg-yellow-100 px-3 py-1 text-sm dark:bg-yellow-800">
                   <span>How It Works</span>
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Food for Every Feeling</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Pagkain para sa Bawat Feeling</h2>
                 <p className="text-gray-500 dark:text-gray-400">
-                  Our quiz analyzes your current emotional state through a series of questions. Based on your responses,
-                  we'll recommend foods scientifically shown to help with your specific mood.
+                  Minsan di natin alam kung anong gusto nating kainin kapag sabog ang mood. Dito tutulungan ka naming pumili ng pagkain base sa nararamdaman mo. Simple lang masaya at Pinoy na Pinoy.
                 </p>
               </div>
               <div className="grid gap-6">
@@ -64,7 +63,7 @@ export default function Home() {
                   <div>
                     <h3 className="font-bold">Happy</h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Celebrate your good mood with foods that maintain your positive energy.
+                       Good vibes? Keep the energy going with food that makes you even happier — kasi deserve mo 'yan.
                     </p>
                   </div>
                 </div>
@@ -73,7 +72,7 @@ export default function Home() {
                   <div>
                     <h3 className="font-bold">Sad</h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Boost your spirits with foods that increase serotonin and dopamine.
+                        Malungkot? We gotchu. May pagkain kaming pampagaan ng loob — parang yakap, pero edible.
                     </p>
                   </div>
                 </div>
@@ -82,7 +81,7 @@ export default function Home() {
                   <div>
                     <h3 className="font-bold">Stressed</h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Calm your mind with foods that reduce cortisol and promote relaxation.
+                       Kung feeling mo sabog na ang utak, try mo muna 'tong mga pagkaing pampakalma. Baka gutom ka lang.
                     </p>
                   </div>
                 </div>

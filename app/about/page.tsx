@@ -6,42 +6,33 @@ export default function About() {
     <div className="container py-12 max-w-4xl">
       <div className="space-y-6">
         <div>
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Mood Food Matcher</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Mood! Anong Ulam?</h1>
           <p className="mt-4 text-gray-500 dark:text-gray-400">
-            Discover how your food choices can impact your emotional wellbeing.
+            Minsan hindi natin alam kung anong gusto nating kainin lalo na kapag sabog ang mood. Dito pumapasok ang Mood! Anong Ulam? para tulungan kang pumili ng pagkain na bagay sa nararamdaman mo ngayon.
           </p>
         </div>
 
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">Our Mission</h2>
           <p>
-            At Mood Food Matcher, we believe that food is more than just fuel for your body—it's also fuel for your mind
-            and emotions. Our mission is to help people understand the connection between what they eat and how they
-            feel, and to provide personalized food recommendations based on their current emotional state.
+            Gusto naming gawing mas madali at mas masaya ang pagpili ng pagkain. Naniniwala kami na ang pagkain hindi lang para sa tiyan kundi para rin sa emosyon. Anuman ang vibe mo ngayon may pagkain na pwedeng tumulong magpasaya magpakalma o magbigay ng konting comfort.
           </p>
         </div>
 
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold">The Science Behind Food and Mood</h2>
+          <h2 className="text-2xl font-bold">Bakit Mood at Food?</h2>
           <p>
-            The connection between food and mood is well-established in scientific research. Certain foods can influence
-            the production of neurotransmitters like serotonin and dopamine, which play crucial roles in regulating
-            mood, sleep, and stress levels.
+            Simple lang. Kapag masama ang pakiramdam, minsan masarap lang kumain ng bagay na swak sa mood. Kung pagod ka, baka isang manggang hilaw na may bagoong ang kailangan mo. Kung stressed ka, taho sa umaga o mainit na sabaw ng sinigang pwedeng magpakalma. Kung masaya ka, edi dagdagan pa natin ng halo-halo o inasal.
           </p>
           <p>
-            For example, foods rich in omega-3 fatty acids, such as fatty fish, have been linked to lower rates of
-            depression. Similarly, foods high in tryptophan, like turkey and bananas, can boost serotonin production,
-            which can help improve mood and promote better sleep.
+            Hindi ito tungkol sa diet o komplikadong konsepto. Gusto lang naming tulungan kang pumili ng makakain na makaka-boost ng araw mo kahit papaano.
           </p>
         </div>
 
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">How Our Quiz Works</h2>
           <p>
-            Our mood assessment quiz asks a series of questions about your current emotional state, energy levels, sleep
-            quality, and other factors that can influence your mood. Based on your responses, our algorithm determines
-            your current mood profile and recommends specific foods that research suggests may help improve or maintain
-            your emotional wellbeing.
+            Sagutan mo lang ang ilang tanong tungkol sa nararamdaman mo ngayon. Pagkatapos, bibigyan ka namin ng mga pagkain na bagay sa vibe mo. Syempre, mga pagkaing kilala at madaling makita sa kahit anong kanto o palengke sa Pinas.
           </p>
           <p>
             While our recommendations are based on scientific research, they are not intended to replace professional
@@ -56,7 +47,7 @@ export default function About() {
               size="lg"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600"
             >
-              Start Your Mood Journey
+              Start
             </Button>
           </Link>
         </div>

@@ -13,89 +13,90 @@ export default function QuizStart() {
 
   const questions = [
   {
-    question: "How would you describe your current energy level?",
+    question: "Kamusta energy mo ngayon?",
     options: [
-      { text: "Very low, I feel drained", emoji: "🔋", value: "low" },
-      { text: "Moderate, I'm okay", emoji: "⚡", value: "moderate" },
-      { text: "High, I feel energetic", emoji: "⚡⚡", value: "high" },
+      { text: "Sagad na, parang lowbat", emoji: "🔋", value: "low" },
+      { text: "Sakto lang, kayang-kaya pa", emoji: "⚡", value: "moderate" },
+      { text: "Full charge, ready to go!", emoji: "⚡⚡", value: "high" },
     ],
   },
   {
-    question: "How would you describe your current mood?",
+    question: "Anong vibe mo ngayon?",
     options: [
-      { text: "Sad or down", emoji: "😔", value: "sad" },
-      { text: "Anxious or stressed", emoji: "😰", value: "anxious" },
-      { text: "Content or happy", emoji: "😊", value: "happy" },
-      { text: "Irritable or angry", emoji: "😠", value: "angry" },
+      { text: "Medyo malungkot", emoji: "😔", value: "sad" },
+      { text: "Kabado o stressed", emoji: "😰", value: "anxious" },
+      { text: "Chill lang, masaya", emoji: "😊", value: "happy" },
+      { text: "Mainit ang ulo", emoji: "😠", value: "angry" },
     ],
   },
   {
-    question: "How has your sleep been recently?",
+    question: "Kamusta tulog mo lately?",
     options: [
-      { text: "Poor, I'm not sleeping well", emoji: "😴", value: "poor" },
-      { text: "Average, could be better", emoji: "💤", value: "average" },
-      { text: "Good, I'm well-rested", emoji: "🛌", value: "good" },
+      { text: "Wasak, kulang sa tulog", emoji: "😴", value: "poor" },
+      { text: "Pwede na, sakto lang", emoji: "💤", value: "average" },
+      { text: "Solid, well-rested", emoji: "🛌", value: "good" },
     ],
   },
   {
-    question: "What time of day is it for you?",
+    question: "Anong oras na diyan?",
     options: [
-      { text: "Morning", emoji: "🌅", value: "morning" },
-      { text: "Afternoon", emoji: "☀️", value: "afternoon" },
-      { text: "Evening", emoji: "🌆", value: "evening" },
-      { text: "Night", emoji: "🌙", value: "night" },
+      { text: "Umaga", emoji: "🌅", value: "morning" },
+      { text: "Tanghali", emoji: "☀️", value: "afternoon" },
+      { text: "Gabi na", emoji: "🌆", value: "evening" },
+      { text: "Dis-oras na ng gabi", emoji: "🌙", value: "night" },
     ],
   },
   {
-    question: "What are you looking to achieve with food right now?",
+    question: "Anong gusto mong ma-achieve sa pagkain ngayon?",
     options: [
-      { text: "Boost my energy", emoji: "🔋", value: "energy" },
-      { text: "Improve my mood", emoji: "😊", value: "mood" },
-      { text: "Relax and calm down", emoji: "😌", value: "relax" },
-      { text: "Help me focus", emoji: "🧠", value: "focus" },
+      { text: "Dagdag energy", emoji: "🔋", value: "energy" },
+      { text: "Ayusin mood ko", emoji: "😊", value: "mood" },
+      { text: "Pampakalma lang", emoji: "😌", value: "relax" },
+      { text: "Makafocus sana", emoji: "🧠", value: "focus" },
     ],
   },
   {
-    question: "Have you felt socially connected today?",
+    question: "Kamusta connection mo sa ibang tao ngayon?",
     options: [
-      { text: "Very disconnected", emoji: "😶", value: "isolated" },
-      { text: "Somewhat connected", emoji: "👥", value: "somewhat_connected" },
-      { text: "Very connected", emoji: "🤝", value: "connected" },
+      { text: "Parang ako lang mag-isa", emoji: "😶", value: "isolated" },
+      { text: "May kausap kahit papano", emoji: "👥", value: "somewhat_connected" },
+      { text: "Connected and thriving", emoji: "🤝", value: "connected" },
     ],
   },
   {
-    question: "What best describes your current thinking pattern?",
+    question: "Anong takbo ng isip mo ngayon?",
     options: [
-      { text: "Racing thoughts", emoji: "💭💨", value: "racing" },
-      { text: "Mostly calm", emoji: "💭", value: "calm" },
-      { text: "Hard to focus", emoji: "😵‍💫", value: "unfocused" },
+      { text: "Sobrang bilis ng thoughts", emoji: "💭💨", value: "racing" },
+      { text: "Kalma lang", emoji: "💭", value: "calm" },
+      { text: "Di makafocus", emoji: "😵‍💫", value: "unfocused" },
     ],
   },
   {
-    question: "Have you felt a sense of purpose or motivation today?",
+    question: "May motivation ka ba today?",
     options: [
-      { text: "Not at all", emoji: "🛑", value: "no_motivation" },
-      { text: "A little", emoji: "⚙️", value: "some_motivation" },
-      { text: "Very motivated", emoji: "🚀", value: "high_motivation" },
+      { text: "Wala, parang ayoko gumalaw", emoji: "🛑", value: "no_motivation" },
+      { text: "Keri lang, konti lang", emoji: "⚙️", value: "some_motivation" },
+      { text: "Motivated and inspired", emoji: "🚀", value: "high_motivation" },
     ],
   },
   {
-    question: "How tense or relaxed does your body feel?",
+    question: "Kamusta katawan mo — tense ba o relax?",
     options: [
-      { text: "Very tense or tight", emoji: "💢", value: "tense" },
-      { text: "Neutral", emoji: "😐", value: "neutral" },
-      { text: "Loose and relaxed", emoji: "🧘‍♂️", value: "relaxed" },
+      { text: "Ang bigat ng pakiramdam", emoji: "💢", value: "tense" },
+      { text: "Wala lang, normal lang", emoji: "😐", value: "neutral" },
+      { text: "Relax na relax", emoji: "🧘‍♂️", value: "relaxed" },
     ],
   },
   {
-    question: "How often have you laughed or smiled today?",
+    question: "May tawa o ngiti ka ba today?",
     options: [
-      { text: "Not at all", emoji: "😶", value: "no_laugh" },
-      { text: "Once or twice", emoji: "🙂", value: "some_laugh" },
-      { text: "Multiple times", emoji: "😄", value: "lots_laugh" },
+      { text: "Walang tawa, seryoso day", emoji: "😶", value: "no_laugh" },
+      { text: "Mga isa o dalawang beses", emoji: "🙂", value: "some_laugh" },
+      { text: "Madami! Good vibes day", emoji: "😄", value: "lots_laugh" },
     ],
   },
 ]
+
 
 
   const [answers, setAnswers] = useState<Record<number, string>>({})
@@ -120,7 +121,7 @@ export default function QuizStart() {
           <CardTitle className="text-center">
             Question {step} of {totalSteps}
           </CardTitle>
-          <CardDescription className="text-center">Let's figure out your mood</CardDescription>
+          <CardDescription className="text-center">Alamin natin kung anong mood trip mo today</CardDescription>
           <Progress value={(step / totalSteps) * 100} className="h-2" />
         </CardHeader>
         <CardContent className="pt-6">
