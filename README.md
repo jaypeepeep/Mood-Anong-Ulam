@@ -45,7 +45,7 @@ cd mood-anong-ulam
 npm install
 ```
 
-# 4. Run the development server\
+# 4. Run the development server
 ```
 npm run dev
 ```
