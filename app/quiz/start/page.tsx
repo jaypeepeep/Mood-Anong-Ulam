@@ -9,53 +9,94 @@ import { Progress } from "@/components/ui/progress"
 export default function QuizStart() {
   const router = useRouter()
   const [step, setStep] = useState(1)
-  const totalSteps = 5
+  const totalSteps = 10
 
   const questions = [
-    {
-      question: "How would you describe your current energy level?",
-      options: [
-        { text: "Very low, I feel drained", emoji: "🔋", value: "low" },
-        { text: "Moderate, I'm okay", emoji: "⚡", value: "moderate" },
-        { text: "High, I feel energetic", emoji: "⚡⚡", value: "high" },
-      ],
-    },
-    {
-      question: "How would you describe your current mood?",
-      options: [
-        { text: "Sad or down", emoji: "😔", value: "sad" },
-        { text: "Anxious or stressed", emoji: "😰", value: "anxious" },
-        { text: "Content or happy", emoji: "😊", value: "happy" },
-        { text: "Irritable or angry", emoji: "😠", value: "angry" },
-      ],
-    },
-    {
-      question: "How has your sleep been recently?",
-      options: [
-        { text: "Poor, I'm not sleeping well", emoji: "😴", value: "poor" },
-        { text: "Average, could be better", emoji: "💤", value: "average" },
-        { text: "Good, I'm well-rested", emoji: "🛌", value: "good" },
-      ],
-    },
-    {
-      question: "What time of day is it for you?",
-      options: [
-        { text: "Morning", emoji: "🌅", value: "morning" },
-        { text: "Afternoon", emoji: "☀️", value: "afternoon" },
-        { text: "Evening", emoji: "🌆", value: "evening" },
-        { text: "Night", emoji: "🌙", value: "night" },
-      ],
-    },
-    {
-      question: "What are you looking to achieve with food right now?",
-      options: [
-        { text: "Boost my energy", emoji: "🔋", value: "energy" },
-        { text: "Improve my mood", emoji: "😊", value: "mood" },
-        { text: "Relax and calm down", emoji: "😌", value: "relax" },
-        { text: "Help me focus", emoji: "🧠", value: "focus" },
-      ],
-    },
-  ]
+  {
+    question: "How would you describe your current energy level?",
+    options: [
+      { text: "Very low, I feel drained", emoji: "🔋", value: "low" },
+      { text: "Moderate, I'm okay", emoji: "⚡", value: "moderate" },
+      { text: "High, I feel energetic", emoji: "⚡⚡", value: "high" },
+    ],
+  },
+  {
+    question: "How would you describe your current mood?",
+    options: [
+      { text: "Sad or down", emoji: "😔", value: "sad" },
+      { text: "Anxious or stressed", emoji: "😰", value: "anxious" },
+      { text: "Content or happy", emoji: "😊", value: "happy" },
+      { text: "Irritable or angry", emoji: "😠", value: "angry" },
+    ],
+  },
+  {
+    question: "How has your sleep been recently?",
+    options: [
+      { text: "Poor, I'm not sleeping well", emoji: "😴", value: "poor" },
+      { text: "Average, could be better", emoji: "💤", value: "average" },
+      { text: "Good, I'm well-rested", emoji: "🛌", value: "good" },
+    ],
+  },
+  {
+    question: "What time of day is it for you?",
+    options: [
+      { text: "Morning", emoji: "🌅", value: "morning" },
+      { text: "Afternoon", emoji: "☀️", value: "afternoon" },
+      { text: "Evening", emoji: "🌆", value: "evening" },
+      { text: "Night", emoji: "🌙", value: "night" },
+    ],
+  },
+  {
+    question: "What are you looking to achieve with food right now?",
+    options: [
+      { text: "Boost my energy", emoji: "🔋", value: "energy" },
+      { text: "Improve my mood", emoji: "😊", value: "mood" },
+      { text: "Relax and calm down", emoji: "😌", value: "relax" },
+      { text: "Help me focus", emoji: "🧠", value: "focus" },
+    ],
+  },
+  {
+    question: "Have you felt socially connected today?",
+    options: [
+      { text: "Very disconnected", emoji: "😶", value: "isolated" },
+      { text: "Somewhat connected", emoji: "👥", value: "somewhat_connected" },
+      { text: "Very connected", emoji: "🤝", value: "connected" },
+    ],
+  },
+  {
+    question: "What best describes your current thinking pattern?",
+    options: [
+      { text: "Racing thoughts", emoji: "💭💨", value: "racing" },
+      { text: "Mostly calm", emoji: "💭", value: "calm" },
+      { text: "Hard to focus", emoji: "😵‍💫", value: "unfocused" },
+    ],
+  },
+  {
+    question: "Have you felt a sense of purpose or motivation today?",
+    options: [
+      { text: "Not at all", emoji: "🛑", value: "no_motivation" },
+      { text: "A little", emoji: "⚙️", value: "some_motivation" },
+      { text: "Very motivated", emoji: "🚀", value: "high_motivation" },
+    ],
+  },
+  {
+    question: "How tense or relaxed does your body feel?",
+    options: [
+      { text: "Very tense or tight", emoji: "💢", value: "tense" },
+      { text: "Neutral", emoji: "😐", value: "neutral" },
+      { text: "Loose and relaxed", emoji: "🧘‍♂️", value: "relaxed" },
+    ],
+  },
+  {
+    question: "How often have you laughed or smiled today?",
+    options: [
+      { text: "Not at all", emoji: "😶", value: "no_laugh" },
+      { text: "Once or twice", emoji: "🙂", value: "some_laugh" },
+      { text: "Multiple times", emoji: "😄", value: "lots_laugh" },
+    ],
+  },
+]
+
 
   const [answers, setAnswers] = useState<Record<number, string>>({})
 

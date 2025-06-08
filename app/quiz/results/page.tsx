@@ -23,117 +23,52 @@ export default function Results() {
   const [result, setResult] = useState<MoodResult | null>(null)
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    // Get individual search parameter values to avoid infinite re-renders
-    const energy = searchParams.get("1") || ""
-    const mood = searchParams.get("2") || ""
-    const sleep = searchParams.get("3") || ""
-    const timeOfDay = searchParams.get("4") || ""
-    const goal = searchParams.get("5") || ""
+ useEffect(() => {
+  const answers = {
+    1: searchParams.get("1") || "",
+    2: searchParams.get("2") || "",
+    3: searchParams.get("3") || "",
+    4: searchParams.get("4") || "",
+    5: searchParams.get("5") || "",
+    6: searchParams.get("6") || "",
+    7: searchParams.get("7") || "",
+    8: searchParams.get("8") || "",
+    9: searchParams.get("9") || "",
+    10: searchParams.get("10") || "",
+  }
 
-    // Only proceed if we have at least some answers
-    if (!energy && !mood && !sleep && !timeOfDay && !goal) {
-      setLoading(false)
-      return
-    }
-
-    // Determine the primary mood based on answers
-    let primaryMood: string
-    let moodEmoji: string
-
-    if (mood === "sad") {
-      primaryMood = "sad"
-      moodEmoji = "😔"
-    } else if (mood === "anxious" || energy === "low") {
-      primaryMood = "anxious"
-      moodEmoji = "😰"
-    } else if (mood === "angry") {
-      primaryMood = "angry"
-      moodEmoji = "😠"
-    } else if (sleep === "poor" && goal === "relax") {
-      primaryMood = "tired"
-      moodEmoji = "😴"
-    } else if (goal === "focus") {
-      primaryMood = "unfocused"
-      moodEmoji = "🧠"
-    } else {
-      primaryMood = "happy"
-      moodEmoji = "😊"
-    }
-
-    // Get food recommendations based on mood
-    const moodResults: Record<string, MoodResult> = {
-      sad: {
-        mood: "Feeling Down",
-        emoji: "😔",
-        description: "Foods that can boost serotonin and improve your mood",
-        foods: [
-          { name: "Dark Chocolate", emoji: "🍫", benefit: "Contains compounds that boost endorphins" },
-          { name: "Bananas", emoji: "🍌", benefit: "Rich in vitamin B6 which helps produce serotonin" },
-          { name: "Salmon", emoji: "🐟", benefit: "Omega-3 fatty acids support brain health" },
-          { name: "Nuts and Seeds", emoji: "🥜", benefit: "Provide tryptophan, a precursor to serotonin" },
-        ],
-      },
-      anxious: {
-        mood: "Anxious or Stressed",
-        emoji: "😰",
-        description: "Foods that can help reduce stress and promote calmness",
-        foods: [
-          { name: "Green Tea", emoji: "🍵", benefit: "Contains L-theanine which promotes relaxation" },
-          { name: "Avocados", emoji: "🥑", benefit: "Rich in B vitamins that help reduce stress" },
-          { name: "Yogurt", emoji: "🥛", benefit: "Probiotics may reduce anxiety and stress" },
-          { name: "Blueberries", emoji: "🫐", benefit: "Antioxidants help manage stress response" },
-        ],
-      },
-      angry: {
-        mood: "Irritable or Angry",
-        emoji: "😠",
-        description: "Foods that can help calm irritability and reduce inflammation",
-        foods: [
-          { name: "Chamomile Tea", emoji: "🍵", benefit: "Has calming effects that may reduce irritability" },
-          { name: "Spinach", emoji: "🥬", benefit: "Magnesium helps regulate emotions" },
-          { name: "Oranges", emoji: "🍊", benefit: "Vitamin C helps reduce stress hormones" },
-          { name: "Whole Grains", emoji: "🌾", benefit: "Stabilize blood sugar to prevent mood swings" },
-        ],
-      },
-      tired: {
-        mood: "Tired or Fatigued",
-        emoji: "😴",
-        description: "Foods that can boost your energy naturally",
-        foods: [
-          { name: "Oatmeal", emoji: "🥣", benefit: "Provides steady energy release" },
-          { name: "Eggs", emoji: "🥚", benefit: "Protein and B vitamins for sustained energy" },
-          { name: "Sweet Potatoes", emoji: "🍠", benefit: "Complex carbs for lasting energy" },
-          { name: "Water", emoji: "💧", benefit: "Hydration is essential for energy levels" },
-        ],
-      },
-      unfocused: {
-        mood: "Distracted or Unfocused",
-        emoji: "🧠",
-        description: "Foods that can help improve concentration and focus",
-        foods: [
-          { name: "Blueberries", emoji: "🫐", benefit: "Antioxidants improve brain function" },
-          { name: "Fatty Fish", emoji: "🐟", benefit: "Omega-3s enhance brain health and focus" },
-          { name: "Pumpkin Seeds", emoji: "🎃", benefit: "Zinc and magnesium support cognition" },
-          { name: "Broccoli", emoji: "🥦", benefit: "Vitamin K helps with brain function" },
-        ],
-      },
-      happy: {
-        mood: "Content or Happy",
-        emoji: "😊",
-        description: "Foods that can help maintain your positive mood",
-        foods: [
-          { name: "Fermented Foods", emoji: "🥒", benefit: "Support gut health which affects mood" },
-          { name: "Berries", emoji: "🍓", benefit: "Antioxidants fight inflammation" },
-          { name: "Leafy Greens", emoji: "🥬", benefit: "Folate supports serotonin production" },
-          { name: "Turmeric", emoji: "🟡", benefit: "Anti-inflammatory properties support brain health" },
-        ],
-      },
-    }
-
-    setResult(moodResults[primaryMood])
+   // Skip if all empty
+  if (Object.values(answers).every(value => value === "")) {
     setLoading(false)
-  }, []) // Empty dependency array since we're reading searchParams directly inside the effect
+    return
+  }
+
+const fetchResult = async () => {
+  try {
+    const res = await fetch("/api/analyze-mood", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ answers }),
+    })
+    const data = await res.json()
+
+    if (data?.mood) {
+      setResult(data)
+    } else {
+      console.error("Invalid result from API:", data)
+      setResult(null)
+    }
+  } catch (err) {
+    console.error("Error calling Gemini API", err)
+    setResult(null)
+  } finally {
+    setLoading(false)
+  }
+}
+
+
+  fetchResult()
+}, [])
 
   if (loading) {
     return (
