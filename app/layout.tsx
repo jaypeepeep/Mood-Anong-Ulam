@@ -7,7 +7,7 @@ import Header from "@/components/header"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Mood Food Matcher",
+  title: "Mood! Anong Ulam?",
   description: "Find the perfect food based on your mood",
     generator: 'v0.dev'
 }

@@ -11,10 +11,10 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-yellow-100 px-3 py-1 text-sm dark:bg-yellow-800">
-                  Find your perfect food match
+                   Yummy sa tummy, matchy sa moody
                 </div>
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                  Mood Food Matcher
+                  Mood! Anong Ulam?
                   <span className="ml-2 inline-flex">
                     <Smile className="h-10 w-10 text-yellow-500 animate-bounce" />
                     <UtensilsCrossed
@@ -24,9 +24,7 @@ export default function Home() {
                   </span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Discover what foods will boost your mood based on how you're feeling right now. Our science-backed
-                  recommendations help you eat for your emotions.
-                </p>
+           Shoutout sa mga kabataan d’yan este lahat ng hindi sure kung gutom lang ba o may pinagdadaanan. Kahit anong mood mo ngayon may pagkain kaming swak sa'yo at hindi lang ulam, promise.               </p>
               </div>
               <div className="space-x-4">
                 <Link href="/quiz/start">
@@ -34,7 +32,7 @@ export default function Home() {
                     size="lg"
                     className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600"
                   >
-                    Start Your Mood Journey
+                    Start
                   </Button>
                 </Link>
                 <Link href="/about">
@@ -97,7 +95,7 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
             <p className="text-center text-sm text-gray-500 dark:text-gray-400">
-              © 2024 Mood Food Matcher. All rights reserved.
+              © 2024 Mood! Anong Ulam?. All rights reserved.
             </p>
             <div className="flex gap-4">
               <Link href="/terms" className="text-sm text-gray-500 hover:underline dark:text-gray-400">

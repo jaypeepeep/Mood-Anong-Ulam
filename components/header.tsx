@@ -15,7 +15,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 font-bold">
           <span className="text-2xl">🍔</span>
           <span className="text-2xl">😊</span>
-          <span className="hidden sm:inline-block">Mood Food Matcher</span>
+          <span className="hidden sm:inline-block">Mood! Anong Ulam?</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           <Link href="/" className="text-sm font-medium hover:underline underline-offset-4">
