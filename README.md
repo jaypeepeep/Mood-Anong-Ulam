@@ -1,30 +1,60 @@
-# Food and mood matcher
+# Mood! Anong Ulam?
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+**Mood! Anong Ulam?** is a fun and thoughtful web app that uses your current mood to help you decide what to eat when you're unsure. Through a quick quiz, it suggests Filipino dishes that match how you feel—whether you need something comforting, energizing, or simply satisfying.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/jps-projects-14164d55/v0-food-and-mood-matcher)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/Bi2y26AcKh6)
+## 💡 Project Purpose
 
-## Overview
+Choosing what to eat can be difficult, especially when your emotions are all over the place. This app helps users connect their mood to meaningful food choices, offering culturally familiar Filipino dishes that provide comfort and enjoyment.
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## 🎯 Features
 
-## Deployment
+- Mood-based quiz with dynamic results
+- Filipino dish recommendations tailored to how you're feeling
+- Clean and responsive UI using Tailwind CSS
+- Culturally grounded experience rooted in familiar local meals
 
-Your project is live at:
+## 🧠 How It Works
 
-**[https://vercel.com/jps-projects-14164d55/v0-food-and-mood-matcher](https://vercel.com/jps-projects-14164d55/v0-food-and-mood-matcher)**
+1. The user takes a short quiz about their current mood.
+2. The app maps mood types to a curated set of Filipino dishes.
+3. Recommended meals are displayed with a short description.
+4. Optionally, users can explore more about the dish or share results.
 
-## Build your app
+## 🛠️ Tech Stack
 
-Continue building your app on:
+- **Framework:** Next.js
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel 
 
-**[https://v0.dev/chat/projects/Bi2y26AcKh6](https://v0.dev/chat/projects/Bi2y26AcKh6)**
+## 🚀 Getting Started
 
-## How It Works
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+# 1. Clone the repository
+```
+git clone https://github.com/your-username/mood-anong-ulam.git
+```
+
+# 2. Navigate to the project folder
+```
+cd mood-anong-ulam
+```
+
+# 3. Install dependencies
+```
+npm install
+```
+
+# 4. Run the development server
+```
+npm run dev
+```
+
+# 5. Open in your browser
+```
+# Visit http://localhost:3000
+```
+
+## 🌐 Live Demo
+
+You can try the app here: [Visit the live site](https://mood-anong-ulam.vercel.app/)
