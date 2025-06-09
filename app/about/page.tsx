@@ -34,11 +34,6 @@ export default function About() {
           <p>
             Sagutan mo lang ang ilang tanong tungkol sa nararamdaman mo ngayon. Pagkatapos, bibigyan ka namin ng mga pagkain na bagay sa vibe mo. Syempre, mga pagkaing kilala at madaling makita sa kahit anong kanto o palengke sa Pinas.
           </p>
-          <p>
-            While our recommendations are based on scientific research, they are not intended to replace professional
-            medical advice. If you're experiencing persistent mood issues, we encourage you to speak with a healthcare
-            provider.
-          </p>
         </div>
 
         <div className="flex justify-center pt-6">
