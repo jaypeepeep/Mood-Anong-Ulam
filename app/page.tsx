@@ -94,16 +94,16 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
             <p className="text-center text-sm text-gray-500 dark:text-gray-400">
-              © 2024 Mood! Anong Ulam?. All rights reserved.
+              © 2025 Mood! Anong Ulam?. All rights reserved.
             </p>
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <Link href="/terms" className="text-sm text-gray-500 hover:underline dark:text-gray-400">
                 Terms
               </Link>
               <Link href="/privacy" className="text-sm text-gray-500 hover:underline dark:text-gray-400">
                 Privacy
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>
