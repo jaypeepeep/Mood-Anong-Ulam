@@ -96,14 +96,14 @@ export default function Home() {
             <p className="text-center text-sm text-gray-500 dark:text-gray-400">
               © 2025 Mood! Anong Ulam?. All rights reserved.
             </p>
-            {/* <div className="flex gap-4">
+            <div className="flex gap-4">
               <Link href="/terms" className="text-sm text-gray-500 hover:underline dark:text-gray-400">
                 Terms
               </Link>
               <Link href="/privacy" className="text-sm text-gray-500 hover:underline dark:text-gray-400">
                 Privacy
               </Link>
-            </div> */}
+            </div>
           </div>
         </div>
       </footer>
