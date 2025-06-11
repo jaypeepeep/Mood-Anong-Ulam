@@ -13,8 +13,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-bold">
-          <span className="text-2xl">🍔</span>
-          <span className="text-2xl">😊</span>
+         <img src="/images/branding/moodAnongUlamLogoWithoutText.png" alt="Mood! Anong Ulam? Logo" className="w-8 h-8" />
           <span className="hidden sm:inline-block">Mood! Anong Ulam?</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">

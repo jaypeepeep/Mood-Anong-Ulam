@@ -37,6 +37,9 @@ export default function RootLayout({
           `,
         }}
       />
+    <head>
+    <link rel="icon" href="/images/branding/moodAnongUlamLogoWithoutText.png" />
+  </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Header />
